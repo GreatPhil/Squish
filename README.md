@@ -12,7 +12,7 @@ The main functions of the program are performed by:
 - compressor.java
 - decomrpessor.java
 
-If run with the -c (compress) option, the TreeMaker beings making a tree.  First, it scans the file, creating what we called "FreqElements" objects for each type of byte ("symbol").  The FreqElements are used for storing the frequency of a byte and the byte itself, as needed for Huffman Tree encoding.  The FreqElements are then stored into an array.  We originally stored these as a Vector, but later changed this to an array data type to improve the program speed.  Next, the array is put into a sorted Vector, and a Tree is made from the Vector.
+If run with the -c (compress) option, the TreeMaker beings making a tree.  First, it scans the file, creating what we called "FreqElements" objects for each type of byte ("symbol").  The FreqElements are used for storing the frequency of a byte and the byte itself, as needed for Huffman Tree encoding.  The FreqElements are then stored into an array.  We originally stored these as a vector data type, but later changed this to an array data type to improve the program speed.  Next, the array is put into a sorted vector, and a Tree is made from the Vector.
 
 Our Trees have a ByteNode field called "root", used to access the top node of the tree, and two Hashtables called thePaths and theBytes used in decompression for memoization and thus improved speed.
 
