@@ -18,10 +18,10 @@ Our Trees have a ByteNode field called "root", used to access the top node of th
 
 Our __ByteNodes__ that make up our tree have these important fields:
 
-    TYPE which can be "root", "inner", "leaf", or "EoF"
-    DATA which is the byte, stored in the node
-    LEFT and RIGHT which are the Children of this node
-    FREQ which is used in building the tree according to the Huffman algorithm.
+    TYPE           Node Type, which can be "root", "inner", "leaf", or "EoF"
+    DATA           This is the data (byte) stored in the node
+    LEFT & RIGHT   The Children of the "byte node"
+    FREQ           Used in building the tree according to the Huffman algorithm.
 
 The __Compression__ has four parts:
 
@@ -45,6 +45,6 @@ __NOTE:__ there are certain aspects of the code where we purposely added flexibi
 
 Note that our help command returns a statement that points out the slowness of our program, especially the decompressing process.  However, we did try the folloing steps to try to increase the program's speed:
 
-      - We used Hashtables to memoize paths
-      - We used a FreqElement array to make frequency checking take O(n) time
-      - We experimented with using Buffered Input Streams -- in order to make the reading process faster
+  - We used Hashtables to memoize paths
+  - We used a FreqElement array to make frequency checking take O(n) time
+  - We experimented with using Buffered Input Streams -- in order to make the reading process faster
